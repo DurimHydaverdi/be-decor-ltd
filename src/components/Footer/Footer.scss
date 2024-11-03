@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__image {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffd700;  // Change to match the theme color
+    }
+  
+    &__text {
+      margin: 5px 0;
+    }
+  
+    &__socials {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+  
+      .footer__icon {
+        color: #ffd700;
+        text-decoration: none;
+        font-size: 1rem;
+  
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .footer__content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
