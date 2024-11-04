@@ -7,12 +7,16 @@ import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import '../src/App.scss'
 import GetInTouch from './components/GetInTouch/GetInTouch';
+import Aesthetic from './components/Aesthetic/Aesthetic';
+import AboutLandingPage from './components/AboutLandingPage/AboutLandingPage';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Hero />
+      <Aesthetic />
+      <AboutLandingPage />
       {/* <Features /> */}
       {/* <Gallery /> */}
       {/* <Contact /> */}

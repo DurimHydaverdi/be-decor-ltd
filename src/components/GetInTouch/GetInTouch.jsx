@@ -1,4 +1,3 @@
-// GetInTouch.js
 import React from 'react';
 import './GetInTouch.scss';
 import GetInTouchImage from '../Assets/GetInTouch.webp';

@@ -1,15 +1,130 @@
 .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  // background-color: #000;
+
+  .hero-image {
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    position: absolute;
+    top: 20;
+    margin-left: 50px;
+    z-index: -1;
+    border-radius: 55px;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 0 100px;
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  .title {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    margin-bottom: 250px;
+  }
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .main-card {
+    margin-bottom: 10px;
+  }
+
+  .video-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://unsplash.com/photos/a-group-of-people-standing-on-top-of-a-construction-site-xAnQIF2251w') center/cover no-repeat;
-    height: 100vh;
-    color: #fff;
+    width: 120px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+
+    .play-icon {
+      color: white;
+      font-size: 2rem;
+    }
+  }
+
+  .button {
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    animation: rotate 10s linear infinite;
   
-    &__content {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: -5px -5px; /* Adjust the radius for spacing */
+      white-space: nowrap;
+    }
+  
+    span:nth-child(1) {
+      transform: rotate(0deg) translate(0, -65px); /* First item at top */
+    }
+    span:nth-child(2) {
+      transform: rotate(90deg) translate(0, -65px); /* Second item at right */
+    }
+    span:nth-child(3) {
+      transform: rotate(180deg) translate(0, -65px); /* Third item at bottom */
+    }
+    span:nth-child(4) {
+      transform: rotate(270deg) translate(0, -65px); /* Fourth item at left */
     }
   }
   
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+}

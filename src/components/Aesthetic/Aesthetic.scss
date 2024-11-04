@@ -1,0 +1,137 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  
+    .intro {
+      flex: 1;
+  
+      .intro-text {
+        .intro-badge {
+          display: inline-block;
+          background-color: #f2f2f2;
+          padding: 5px 10px;
+          font-size: 12px;
+          border-radius: 5px;
+          color: #333;
+          margin-bottom: 10px;
+        }
+  
+        .intro-title {
+          font-size: 36px;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+  
+      .intro-image {
+        margin-top: 20px;
+  
+        img {
+          width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+    }
+  
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .details-card {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        height: 200px;
+        position: relative; /* Add this to allow positioning of child elements */
+        background-image: url('../Assets/5.webp'); /* Adjust the path as needed */
+        background-size: cover; /* Cover the entire card */
+        background-position: center; /* Center the image */
+        color: white; /* Change text color for better contrast, if necessary */
+  
+        .details-badge {
+          display: inline-block;
+          /* background-color: #ddd; */
+          padding: 5px 10px;
+          font-size: 12px;
+          border-radius: 50px;
+          margin-bottom: 10px;
+          color: black;
+          border: 1px solid;
+          backdrop-filter: blur(5px);
+        }
+  
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          margin: 10px 0;
+          position: relative; /* Ensure text is above the background */
+          z-index: 1; /* Ensure text is above the background */
+          // background-color: rgba(0, 0, 0, 0.5);
+          padding: 10px; /* Optional: padding for better readability */
+        }
+  
+        p {
+          font-size: 16px;
+          color: #888;
+        }
+  
+        .details-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          margin-top: 10px;
+          object-fit: cover;
+          display: block;
+        }
+  
+        .details-link {
+          display: inline-flex;
+          align-items: center;
+          font-size: 24px;
+          color: #333;
+          cursor: pointer;
+          margin-top: auto;
+          position: relative; /* Ensure link is above the background */
+          z-index: 1; /* Ensure link is above the background */
+  
+          span {
+            display: inline-block;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  .stats {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+  
+    .stats-item {
+      flex: 1;
+  
+      h3 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+  

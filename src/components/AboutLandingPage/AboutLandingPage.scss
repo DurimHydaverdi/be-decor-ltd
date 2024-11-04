@@ -1,0 +1,53 @@
+.about-landing-page {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+}
+
+.about-landing-page-left {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-left: 400px;
+
+    img {
+        position: static;
+        top: 0;
+        left: 0;
+        width: 25vw;
+        height: 33vw;
+        object-fit: cover;
+    }
+}
+
+.about-landing-page-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: flex-start; 
+        margin: 13px 0 10px;
+        max-width: 400px;
+        color: #333;
+        text-align: left;
+        margin-right: 500px;
+    
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+button {
+    color: white;
+    background: black;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0 10px; /* Optional: Add some horizontal padding for better appearance */
+    margin-top: 20px; /* Optional: Add margin to separate it from other elements */
+}
