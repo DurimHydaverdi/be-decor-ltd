@@ -1,28 +1,27 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';  // Import BrowserRouter
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-// import Features from './components/Features';
-// import Gallery from './components/Gallery';
-// import Contact from './components/Contact';
 import Footer from './components/Footer/Footer';
-import '../src/App.scss'
 import GetInTouch from './components/GetInTouch/GetInTouch';
 import Aesthetic from './components/Aesthetic/Aesthetic';
 import AboutLandingPage from './components/AboutLandingPage/AboutLandingPage';
+import Collection from './components/Collection/Collection';
+import '../src/App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Aesthetic />
-      <AboutLandingPage />
-      {/* <Features /> */}
-      {/* <Gallery /> */}
-      {/* <Contact /> */}
-      <GetInTouch />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Hero />
+        {/* <Aesthetic /> */}
+        <Collection />
+        <AboutLandingPage />
+        <GetInTouch />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,27 +1,42 @@
-// Footer.js
 import React from 'react';
 import './Footer.scss';
-import GetInTouch from '../Assets/GetInTouch.webp';
+import logo from '../Assets/logo3.png';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__content">
-        <img src={GetInTouch} alt="Get In Touch" className="footer__image" />
-        <div className="footer__info">
-          <h2 className="footer__title">Get In Touch</h2>
-          <p className="footer__text">123 Main St, Anytown, AN 12345</p>
-          <p className="footer__text">Email: info@company.com</p>
-          <p className="footer__text">Phone: +1 (555) 123-4567</p>
+      <div className="footerContent">
+        <div className="footerSection logoSection">
+          <img src={logo} alt="Footer Logo" />
         </div>
-        <div className="footer__socials">
-          <a href="#facebook" className="footer__icon">Facebook</a>
-          <a href="#instagram" className="footer__icon">Instagram</a>
-          <a href="#twitter" className="footer__icon">Twitter</a>
+        <div className="footerSection">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#guest-rules">Guest Rules</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+          </ul>
         </div>
+        <div className="footerSection">
+          <h3>Contacts</h3>
+          <ul>
+            <li><span role="img" aria-label="phone">📞</span> <a href="tel:+38349100019">+447495911553</a></li>
+            <li><span role="img" aria-label="email">📧</span> <a href="mailto:duavillage1@gmail.com">contact@be-decor.com</a></li>
+            {/* <li><a href='https://tinyurl.com/yc6pvx65' target="_blank" rel="noreferrer"><span role="img" aria-label="location">📍</span> Prishtinë, Keçekollë - Dua Village</a></li> */}
+          </ul>
+        </div>
+        <div className="footerSection">
+          <h3>Social Media</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/bedecorltd/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="footerBottom">
+        <p>&copy; 2024 Be Decor LTD. All rights reserved.</p>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

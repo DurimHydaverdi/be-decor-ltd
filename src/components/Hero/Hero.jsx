@@ -18,10 +18,10 @@ function Hero() {
           <button className="button">View More →</button>
         </div>
         <div className="circle">
-          <span>Modern</span>
-          <span>Minimalist</span>
-          <span>Design</span>
-          <span>Renovating</span>
+          <span>Cleaning</span>
+          <span>Painting</span>
+          <span>Electrical</span>
+          <span>Plumbing</span>
         </div>
       </div>
     </section>

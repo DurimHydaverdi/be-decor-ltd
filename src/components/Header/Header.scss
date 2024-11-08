@@ -1,25 +1,64 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.header-logo {
+  flex-shrink: 0; /* Prevents logo from shrinking */
+}
+
+.header-logo img {
+  height: auto; /* Ensures logo maintains its aspect ratio */
+  width: 100%; /* Makes the image responsive */
+  max-width: 150px; /* Limits the max width to 150px for large screens */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav a {
+  margin: 0 20px; /* Increases spacing between navigation links */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase; /* Optional for a more modern look */
   
-    &__logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  
-    &__nav {
-      a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #333;
-  
-        &:hover {
-          color: #000;
-        }
-      }
-    }
+  &:hover {
+    color: #000;
   }
-  
+}
+
+/* Optional: Hover effect on logo */
+.header-logo img {
+  transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo {
+    margin-bottom: 10px; /* Space between logo and navigation */
+  }
+
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-nav a {
+    margin: 10px 0; /* Space between navigation links */
+  }
+}
