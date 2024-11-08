@@ -1,0 +1,122 @@
+.projects {
+    .projects-intro {
+      background-image: url('../../components/Assets/background.webp');
+      background-size: cover;
+      background-position: center;
+      height: 446px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+  
+    .white-box {
+      height: 200px;
+      width: 900px;
+      color: black;
+      background: white;
+      margin-top: 150px;
+      padding: 3rem;
+      text-align: left;
+    //   border-bottom: solid 1px black;
+  
+      h2 {
+        font-size: 56px;
+        margin-bottom: 50px;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+  
+      p {
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.8em;
+      }
+    }
+  
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 2rem 0;
+  
+      .project {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem;
+        background-color: #fff;
+        // border-radius: 10px;
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+        &.left {
+          flex-direction: row; /* Image on the left, text on the right */
+        }
+  
+        &.right {
+          flex-direction: row-reverse; /* Image on the right, text on the left */
+        }
+  
+        .project-image {
+          width: 500px;
+          height: 500px;
+          background-size: cover;
+          background-position: center;
+        //   border-radius: 10px;
+        }
+  
+        .project-content {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 1rem;
+  
+          h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+          }
+  
+          .project-button {
+            display: flex;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+  
+            &:hover {
+              background-color: #333;
+            }
+  
+            svg {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .separator {
+        width: 980px;
+        // height: 5px;
+        // background-color: #000;
+        margin: 0 auto;
+        border: 1px solid gray;
+        --lnw: 1px;
+      }
+    }
+  }
+  

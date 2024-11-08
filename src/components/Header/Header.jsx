@@ -14,9 +14,9 @@ function Header() {
       </div>
       <nav className="header-nav">
       <Link to="/"><a href="#home">Home</a></Link>
-        <a href="#gallery">Projects</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <Link to="/projects"><a href="projects">Projects</a></Link>  
+      <Link to="/services"><a href="services">Services</a></Link> 
+      <Link to="/contact"><a href="contact">Contact</a></Link> 
       </nav>
     </header>
   );
