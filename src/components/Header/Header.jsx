@@ -1,4 +1,3 @@
-// Header.js
 import React from 'react';
 import './Header.scss';
 import logo from '../Assets/logo2.png'
@@ -13,10 +12,10 @@ function Header() {
         </Link>
       </div>
       <nav className="header-nav">
-      <Link to="/"><a href="#home">Home</a></Link>
-      <Link to="/projects"><a href="projects">Projects</a></Link>  
-      <Link to="/services"><a href="services">Services</a></Link> 
-      <Link to="/contact"><a href="contact">Contact</a></Link> 
+      <Link to="/">Home</Link>
+      <Link to="/projects">Projects</Link>  
+      <Link to="/services">Services</Link> 
+      <Link to="/contact">Contact</Link> 
       </nav>
     </header>
   );

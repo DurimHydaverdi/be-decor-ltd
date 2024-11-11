@@ -20,8 +20,8 @@ const Footer = () => {
         <div className="footerSection">
           <h3>Contacts</h3>
           <ul>
-            <li><span role="img" aria-label="phone">📞</span> <a href="tel:+38349100019">+447495911553</a></li>
-            <li><span role="img" aria-label="email">📧</span> <a href="mailto:duavillage1@gmail.com">contact@be-decor.com</a></li>
+            <li><span role="img" aria-label="phone">📞</span> <a href="tel:+447459507291">+447459507291</a></li>
+            <li><span role="img" aria-label="email">📧</span> <a href="mailto:contact@be-decor.com">contact@be-decor.com</a></li>
             {/* <li><a href='https://tinyurl.com/yc6pvx65' target="_blank" rel="noreferrer"><span role="img" aria-label="location">📍</span> Prishtinë, Keçekollë - Dua Village</a></li> */}
           </ul>
         </div>

@@ -1,0 +1,115 @@
+.services {
+    // padding: 3rem 2rem;
+    
+    .services-header {
+      display: flex;
+    //   justify-content: space-between;
+      align-items: flex-start;
+      gap: 20rem;
+      padding: 3rem 2rem;
+  
+      h1 {
+        font-size: 56px;
+        margin-bottom: 50px;
+        max-width: 600px;
+        margin: 10 auto;
+      }
+  
+      p {
+        font-size: 16px;
+        max-width: 600px;
+        margin: 10 auto;
+        line-height: 1.8em;
+      }
+    }
+  
+    .service-intro {
+        background-image: url('../../components/Assets/background2.webp');
+        background-size: cover;
+        background-position: center;
+        height: 446px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+    
+      .white-box {
+        height: 200px;
+        width: 900px;
+        color: black;
+        background: white;
+        margin-top: 150px;
+        padding: 3rem;
+        text-align: left;
+      //   border-bottom: solid 1px black;
+    
+        h2 {
+          font-size: 56px;
+          margin-bottom: 50px;
+          max-width: 600px;
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+    
+        p {
+          font-size: 16px;
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.8em;
+        }
+      }
+  
+      .services-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      
+        .service-item {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 2rem;
+          padding: 2rem;
+      
+          .service-image {
+            width: 450px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+          }
+      
+          .service-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.5rem;
+          }
+      
+          h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+          }
+      
+          p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0 0;
+          }
+        }
+      }      
+  
+    .services-background {
+      margin-top: 3rem;
+  
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+  
