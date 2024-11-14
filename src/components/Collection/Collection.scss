@@ -12,9 +12,9 @@
         font-size: 4rem;
         margin: 0;
         flex: 1;
-        word-wrap: break-word; /* Forces the text to wrap */
-            white-space: normal; /* Allows the text to wrap naturally */
-            max-width: 600px; /* Adjust width to force text to wrap */
+        word-wrap: break-word;
+        white-space: normal; 
+        max-width: 600px; 
       }
   
       .header-right {
@@ -26,20 +26,21 @@
             color: #666;
             margin-bottom: 1rem;
             text-align: right;
-            line-height: 1.5; /* Controls line spacing */
-            word-wrap: break-word; /* Forces the text to wrap */
-            white-space: normal; /* Allows the text to wrap naturally */
-            max-width: 400px; /* Adjust width to force text to wrap */
+            line-height: 1.5; 
+            word-wrap: break-word; 
+            white-space: normal; 
+            max-width: 400px; 
         }
   
         .collection-button {
           background: #000;
           color: #fff;
           border: none;
-        //   padding: 0.8rem 1.2rem;
           border-radius: 5px;
           cursor: pointer;
           transition: background 0.3s ease;
+          height: 30px;
+          width: 120px;
   
           &:hover {
             background: #333;
@@ -75,6 +76,8 @@
       height: auto;
       object-fit: cover;
       border-radius: 10px;
+      opacity: 1; 
+      filter: brightness(80%); 
     }
   
     .collection-overlay {
@@ -105,14 +108,314 @@
         justify-content: center;
         transform: rotate(-45deg);
         transition: all 0.5s ease; /* Adds transition for smooth effect */
-      }
-
-      svg.arrow:hover {
         background-color: white;
         border-radius: 50%;
-        height: 50px;
-        width: 50px;
       }
+
+      // svg.arrow:hover {
+      //   background-color: white;
+      //   border-radius: 50%;
+      //   height: 50px;
+      //   width: 50px;
+      // }
+    }
+  }
+  
+
+  /* Responsive Breakpoints */
+  @media (max-width: 1280px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 50px;
+      width: 50px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: -15px;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 36px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 40px;
+      width: 40px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 24px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  @media (max-width: 912px) {
+    .collection {
+      margin-top: 200px;
+    }
+    .collection-header h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 853px) {
+    .collection {
+      margin-top: 200px;
+    }
+    .collection-header h2 {
+      font-size: 2.3rem;
+    }
+  }
+  
+  @media (max-width: 820px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 35px;
+      width: 35px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 20px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+      .collection .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .collection .collection-overlay svg.arrow{
+        height: 35px;
+        width: 35px;
+        background-color: white;
+        border-radius: 50%;
+      }
+      .collection .collection-overlay {
+        width: 85%;
+      }
+      .collection .collection-overlay span {
+        font-size: 18px;
+      }
+      .collection {
+        margin-top: 270px;
+      }
+      .collection .collection-image {
+        opacity: 1; 
+        filter: brightness(80%); 
+      }
+    }
+  
+  
+  @media (max-width: 540px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 25px;
+      width: 25px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 18px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .collection {
+      margin-top: 250px;
+    }
+    .collection-header {
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .collection .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .header-right {
+      align-items: flex-start;
+      p {
+        text-align: left;
+      }
+    }
+    .collection-overlay span {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 12px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+
+  @media (max-width: 412px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 0px;
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 12px;
+    }
+    .collection {
+      margin-top: 270px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .collection {
+      margin-top: 200px;
+    }
+    .collection-header h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .collection .collection-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .collection .collection-overlay svg.arrow{
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border-radius: 50%;
+  
+    }
+    .collection .collection-overlay {
+      width: 85%;
+    }
+    .collection .collection-overlay span {
+      font-size: 12px;
+    }
+    .collection {
+      margin-top: 260px;
+    }
+    .collection .collection-image {
+      opacity: 1; 
+      filter: brightness(80%); 
+    }
+  }
+  
+  
+  @media (max-width: 360px) {
+      .collection .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .collection .collection-overlay svg.arrow{
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      .collection .collection-overlay {
+        width: 85%;
+      }
+      .collection .collection-overlay span {
+        font-size: 12px;
+      }
+      .collection {
+        margin-top: 270px;
+      }
+      .collection .collection-image {
+        opacity: 1; 
+        filter: brightness(80%); 
+      }
+    }
+  
+  @media (max-width: 344px) {
+    .collection-header h2 {
+      font-size: 0.9rem;
     }
   }
   

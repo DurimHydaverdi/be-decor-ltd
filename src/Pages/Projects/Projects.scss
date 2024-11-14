@@ -141,3 +141,274 @@
     }
   }
   
+  .projects {
+    // Base styling here (no media query)
+  
+    .project-image-slider {
+      width: 800px;
+  
+      .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .projects-intro {
+      height: 446px;
+      .white-box {
+        width: 900px;
+        height: 200px;
+      }
+    }
+  
+    .projects-list {
+      .project {
+        .project-image {
+          width: 500px;
+          height: 500px;
+        }
+  
+        .project-content {
+          width: 50%;
+        }
+      }
+  
+      .separator {
+        width: 980px;
+      }
+    }
+  
+    // Media Queries
+  
+    @media (max-width: 1280px) {
+      .project-image-slider {
+        width: 700px;
+      }
+  
+      .projects-intro {
+        height: 400px;
+        .white-box {
+          width: 800px;
+        }
+      }
+  
+      .projects-list {
+        .project {
+          .project-image {
+            width: 450px;
+            height: 450px;
+          }
+  
+          .project-content {
+            width: 60%;
+          }
+        }
+  
+        .separator {
+          width: 900px;
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .projects-intro {
+        height: 350px;
+  
+        .white-box {
+          width: 700px;
+        }
+      }
+  
+      .projects-list {
+        .project {
+          flex-direction: column;
+          text-align: center;
+  
+          &.left,
+          &.right {
+            flex-direction: column;
+          }
+  
+          .project-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+          }
+  
+          .project-content {
+            width: 100%;
+          }
+        }
+  
+        .separator {
+          width: 700px;
+        }
+      }
+    }
+  
+    @media (max-width: 912px) {
+      .projects-intro {
+        .white-box {
+          width: 600px;
+        }
+      }
+    }
+  
+    @media (max-width: 853px) {
+      h2 {
+        font-size: 48px;
+      }
+  
+      .projects-intro .white-box {
+        padding: 2rem;
+      }
+    }
+  
+    @media (max-width: 820px) {
+      h2 {
+        font-size: 42px;
+      }
+  
+      .projects-intro .white-box {
+        width: 500px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .projects-list {
+        .project {
+          flex-direction: column;
+  
+          .project-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+          }
+  
+          .project-content {
+            width: 100%;
+          }
+        }
+  
+        .separator {
+          width: 300px;
+          margin-top: -50px;
+        }
+      }
+    }
+  
+    @media (max-width: 540px) {
+      .project-image-slider {
+        width: 450px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+  
+      .projects-intro .white-box {
+        width: 300px;
+        margin-top: 0px;
+      }
+
+      .white-box h2 {
+        font-size: 36px;
+      }
+  
+      .projects-list .project-content h3 {
+        font-size: 1.4rem;
+      }
+    }
+  
+    @media (max-width: 430px) {
+      .project-image-slider {
+        width: 350px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+  
+      .projects-list .project-content h3 {
+        font-size: 1.25rem;
+      }
+    }
+  
+    @media (max-width: 414px) {
+      .project-image-slider {
+        width: 350px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+  
+      .projects-list .project-content h3 {
+        font-size: 1.2rem;
+        margin-top: 0px;
+      }
+  
+      .projects-intro .white-box {
+        width: 350px;
+        padding: 1.5rem;
+      }
+    }
+  
+    @media (max-width: 412px) {
+      .project-image-slider {
+        width: 300px;
+      }
+  
+      .projects-intro .white-box {
+        width: 340px;
+      }
+    }
+  
+    @media (max-width: 390px) {
+      h2 {
+        font-size: 28px;
+      }
+  
+      .projects-intro .white-box {
+        width: 320px;
+      }
+    }
+  
+    @media (max-width: 375px) {
+      h2 {
+        font-size: 26px;
+      }
+  
+      .projects-intro .white-box {
+        width: 300px;
+      }
+    }
+  
+    @media (max-width: 360px) {
+      h2 {
+        font-size: 24px;
+      }
+  
+      .projects-intro .white-box {
+        width: 280px;
+        padding: 1rem;
+      }
+  
+      .projects-list .project-content h3 {
+        font-size: 1rem;
+      }
+    }
+  
+    @media (max-width: 344px) {
+      h2 {
+        font-size: 22px;
+      }
+  
+      .projects-intro .white-box {
+        width: 260px;
+      }
+    }
+  }
+  
+  

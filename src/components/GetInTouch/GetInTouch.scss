@@ -1,11 +1,24 @@
 .get-in-touch {
+  position: relative;
   display: flex;
-  gap: 40px; /* Add space between the left and right sections */
+  gap: 40px;
   height: 100vh;
-  padding: 0 40px; /* Add padding on the sides */
+  padding: 0 40px;
+  margin-top: 150px;
   background-color: #fff;
   color: #333;
-  // margin-bottom: 50px;
+}
+
+.get-in-touch-title {
+  position: absolute;
+  top: -150px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: black;
+  z-index: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 .get-in-touch-left {
@@ -16,10 +29,12 @@
   justify-content: center;
   padding: 20px;
   background-image: url('../../components/Assets/2.webp');
-  background-size: 500px 600px; /* Set custom size for the image */
+  background-size: cover; /* Cover the container with the image */
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  overflow: hidden; /* Ensures the image fits within the rounded corners */
+  height: 80%; /* Ensures full height */
 }
 
 .get-in-touch-content {
@@ -108,4 +123,301 @@
 
 .get-in-touch-submit:hover {
   background-color: #005bb5;
+}
+
+@media (max-width: 1280px) {
+  .get-in-touch-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .get-in-touch {
+    padding: 0 20px;
+    height: 50vh;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 1.6rem;
+  }
+  .get-in-touch-left,
+  .get-in-touch-right {
+    height: 80%;
+  }
+}
+
+@media (max-width: 912px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 90%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 95%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 95%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 95%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 90%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 90%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .get-in-touch-content h2 {
+    font-size: 0.95rem;
+  }
+
+  .get-in-touch-submit {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .get-in-touch-title {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+
+  .get-in-touch-left,
+  .get-in-touch-right {
+    width: 90%;
+    margin: 0;
+  }
+
+  .get-in-touch-form {
+    max-width: 100%;
+  }
+
+  .get-in-touch-content h2 {
+    font-size: 0.9rem;
+  }
+  .get-in-touch-submit {
+    padding: 0px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .get-in-touch-content h2 {
+    font-size: 0.85rem;
+  }
+  .get-in-touch-title {
+    font-size: 23px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 344px) {
+  .get-in-touch-content h2 {
+    font-size: 0.8rem;
+  }
+  .get-in-touch-title {
+    font-size: 22px;
+    margin-top: 50px;
+  }
 }

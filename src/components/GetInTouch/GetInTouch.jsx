@@ -1,16 +1,15 @@
 import React from 'react';
 import './GetInTouch.scss';
-// import GetInTouchImage from '../Assets/GetInTouch.webp';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
 function GetInTouch() {
   return (
     <section className="get-in-touch">
+      <h2 className="get-in-touch-title">Get in Touch</h2>
       {/* Left Column - Contact Info */}
       <div className="get-in-touch-left">
         <div className="get-in-touch-content">
-          <h2 className="get-in-touch-title">Get in Touch</h2>
           <p><strong>Phone</strong><br />+447495911553</p>
           <p><strong>Email</strong><br />contact@bedecorltd.com</p>
           <div className="get-in-touch-socials">
