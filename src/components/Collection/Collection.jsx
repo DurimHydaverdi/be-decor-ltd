@@ -1,5 +1,6 @@
 import React from 'react';
 import './Collection.scss';
+import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import mondrian from '../Assets/8.webp';
 import nirnia from '../Assets/3.webp';
@@ -23,7 +24,7 @@ function Collection() {
       <div className="collection-header">
         <h2>Explore Our Proudly Collection</h2>
         <div className="header-right">
-        <button className="collection-button">View More <FaArrowRight /></button>
+        <Link to="/services"><button className="collection-button">View More <FaArrowRight /></button></Link>
             <p>
             Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile.Milano 2024.
             </p>
