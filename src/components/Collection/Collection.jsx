@@ -9,6 +9,11 @@ import brera from '../Assets/5.webp';
 import aleapro from '../Assets/6.webp';
 import alea from '../Assets/7.webp';
 
+// Scroll to the top of the page
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 function Collection() {
   const collectionItems = [
     { title: 'Mondrian', image: mondrian },
@@ -24,19 +29,23 @@ function Collection() {
       <div className="collection-header">
         <h2>Explore Our Proudly Collection</h2>
         <div className="header-right">
-        <Link to="/services"><button className="collection-button">View More <FaArrowRight /></button></Link>
-            <p>
+          <Link to="/services" onClick={scrollToTop}>
+            <button className="collection-button">
+              View More <FaArrowRight />
+            </button>
+          </Link>
+          <p>
             Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile.Milano 2024.
-            </p>
+          </p>
         </div>
-        </div>
+      </div>
       <div className="collection-grid">
         {collectionItems.map((item, index) => (
           <div key={index} className="collection-item">
             <img src={item.image} alt={item.title} className="collection-image" />
             <div className="collection-overlay">
               <span>{item.title}</span>
-              <FaArrowRight className="arrow"/>
+              <FaArrowRight className="arrow" />
             </div>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 import logo from '../Assets/logo2.png';
 import { Link } from 'react-router-dom';
@@ -9,18 +9,6 @@ function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  // Prevent scrolling when the menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-
-    // Clean up class when component unmounts
-    return () => document.body.classList.remove('no-scroll');
-  }, [isOpen]);
 
   return (
     <header className="header">
