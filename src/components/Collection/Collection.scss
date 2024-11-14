@@ -158,6 +158,7 @@
       width: 40px;
       background-color: white;
       border-radius: 50%;
+      margin-right: 0px;
     }
     .collection .collection-overlay {
       width: 85%;
@@ -201,6 +202,7 @@
       width: 35px;
       background-color: white;
       border-radius: 50%;
+      margin-right: 0px;
     }
     .collection .collection-overlay {
       width: 85%;
@@ -226,6 +228,7 @@
         width: 35px;
         background-color: white;
         border-radius: 50%;
+        margin-right: 5px;
       }
       .collection .collection-overlay {
         width: 85%;
@@ -284,7 +287,7 @@
       width: 20px;
       background-color: white;
       border-radius: 50%;
-      margin-right: 20px;
+      margin-right: 5px;
     }
     .collection .collection-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -308,6 +311,7 @@
       height: 20px;
       width: 20px;
       background-color: white;
+      margin-right: 5px;
       border-radius: 50%;
     }
     .collection .collection-overlay {
@@ -334,7 +338,7 @@
       width: 20px;
       background-color: white;
       border-radius: 50%;
-      margin-right: 0px;
+      margin-right: 5px;
     }
     .collection .collection-overlay {
       width: 85%;
@@ -369,7 +373,7 @@
       width: 20px;
       background-color: white;
       border-radius: 50%;
-  
+      margin-right: 5px;
     }
     .collection .collection-overlay {
       width: 85%;
@@ -414,6 +418,13 @@
     }
   
   @media (max-width: 344px) {
+    .collection .collection-overlay svg.arrow{
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
     .collection-header h2 {
       font-size: 0.9rem;
     }
