@@ -10,6 +10,7 @@ import Projects from './Pages/Projects/Projects';
 import Contact from './Pages/Contact/Contact';
 import Services from './Pages/Services/Services'; 
 import './App.scss';
+import ServicesLandingPage from './components/ServicesLandingPage/ServicesLandingPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={
             <div>
               <Hero />
+              <ServicesLandingPage />
               <Collection />
               <ContactLandingPage />
               <GetInTouch />

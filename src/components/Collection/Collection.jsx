@@ -16,12 +16,12 @@ const scrollToTop = () => {
 
 function Collection() {
   const collectionItems = [
-    { title: 'Mondrian', image: mondrian },
-    { title: 'Nirnia', image: nirnia },
-    { title: 'Artex', image: artex },
-    { title: 'Brera', image: brera },
-    { title: 'Alea Pro', image: aleapro },
-    { title: 'Nirnia', image: alea },
+    { title: 'Painting', image: mondrian, projectId: 1 },
+    { title: 'A/C', image: nirnia, projectId: 2 },
+    { title: 'Plumbing', image: artex, projectId: 3 },
+    { title: 'Electricity', image: brera, projectId: 4 },
+    { title: 'Carpentry', image: aleapro, projectId: 5 },
+    { title: 'Cleaning', image: alea, projectId: 6 },
   ];
 
   return (
@@ -29,24 +29,26 @@ function Collection() {
       <div className="collection-header">
         <h2>Explore Our Proudly Collection</h2>
         <div className="header-right">
-          <Link to="/services" onClick={scrollToTop}>
+          <p>
+            Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile.Milano 2024.
+          </p>
+          <Link to="/projects" onClick={scrollToTop}>
             <button className="collection-button">
               View More <FaArrowRight />
             </button>
           </Link>
-          <p>
-            Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile.Milano 2024.
-          </p>
         </div>
       </div>
       <div className="collection-grid">
         {collectionItems.map((item, index) => (
           <div key={index} className="collection-item">
-            <img src={item.image} alt={item.title} className="collection-image" />
-            <div className="collection-overlay">
-              <span>{item.title}</span>
-              <FaArrowRight className="arrow" />
-            </div>
+            <Link to={`/projects?id=${item.projectId}`} onClick={scrollToTop}>
+              <img src={item.image} alt={item.title} className="collection-image" />
+              <div className="collection-overlay">
+                <span>{item.title}</span>
+                <FaArrowRight className="arrow" />
+              </div>
+            </Link>
           </div>
         ))}
       </div>

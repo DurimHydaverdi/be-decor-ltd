@@ -13,10 +13,10 @@ function GetInTouch() {
           <p><strong>Phone</strong><br />+447495911553</p>
           <p><strong>Email</strong><br />contact@bedecorltd.com</p>
           <div className="get-in-touch-socials">
-            <a href="#facebook" aria-label="Facebook"><FaFacebook /></a>
-            <a href="#twitter" aria-label="X"><FaXTwitter /></a>
-            <a href="#instagram" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#linkedin" aria-label="LinkedIn"><FaLinkedin /></a>
+            {/* <a href="#facebook" aria-label="Facebook"><FaFacebook /></a> */}
+            {/* <a href="#twitter" aria-label="X"><FaXTwitter /></a> */}
+            <a href="https://www.instagram.com/bedecorltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+            {/* <a href="#linkedin" aria-label="LinkedIn"><FaLinkedin /></a> */}
           </div>
         </div>
       </div>

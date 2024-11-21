@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Projects.scss';
-// import { FaArrowRight } from 'react-icons/fa';
 import project1 from '../../components/Assets/5.webp';
 import project2 from '../../components/Assets/3.webp';
 import project3 from '../../components/Assets/4.webp';
@@ -34,13 +34,13 @@ const projects = [
   },
   {
     id: 4,
-    title: '4 | Eletricity',
+    title: '4 | Electricity',
     description: 'Electricity is a type of energy that consists of the movement of electrons between two points when there is a potential difference between them, making it possible to generate what is known as an electric current.',
     images: [project4, project3, project2, project1],
   },
   {
     id: 5,
-    title: '5 | Property Managment',
+    title: '5 | Property Management',
     description: 'Property management is the daily oversight of residential, commercial, or industrial real estate by a third-party contractor. Generally, property managers take responsibility for day-to-day repairs and ongoing maintenance, security, and upkeep of properties.',
     images: [project5, project3, project2, project1],
   },
@@ -53,11 +53,27 @@ const projects = [
 ];
 
 function Projects() {
+  const location = useLocation();
+
+  // Get the project ID from the query parameters
+  const queryParams = new URLSearchParams(location.search);
+  const projectId = parseInt(queryParams.get('id'), 10);
+
+  // Scroll to the selected project when the page loads
+  useEffect(() => {
+    if (projectId) {
+      const projectElement = document.getElementById(`project-${projectId}`);
+      if (projectElement) {
+        projectElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [projectId]);
+
   return (
     <section className="projects">
       <div className="projects-intro">
         <div className="white-box">
-          <h2>Our Work</h2>
+          <h2>Our Projects</h2>
           <p>
             This is your Project Page. It's a great opportunity to help visitors understand the context and background of your latest work.
           </p>
@@ -66,7 +82,10 @@ function Projects() {
       <div className="projects-list">
         {projects.map((project, index) => (
           <React.Fragment key={project.id}>
-            <div className={`project ${index % 2 === 0 ? 'left' : 'right'}`}>
+            <div
+              id={`project-${project.id}`}
+              className={`project ${index % 2 === 0 ? 'left' : 'right'}`}
+            >
               <div className="project-image-slider">
                 <Swiper
                   spaceBetween={10}
@@ -78,7 +97,11 @@ function Projects() {
                 >
                   {project.images.map((image, idx) => (
                     <SwiperSlide key={idx}>
-                      <img src={image} alt={`Project ${project.id} - Slide ${idx + 1}`} className="slider-image" />
+                      <img
+                        src={image}
+                        alt={`Project ${project.id} - Slide ${idx + 1}`}
+                        className="slider-image"
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -86,9 +109,6 @@ function Projects() {
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                {/* <button className="project-button">
-                  View Project <FaArrowRight />
-                </button> */}
               </div>
             </div>
             {index < projects.length - 1 && <div className="separator"></div>}
