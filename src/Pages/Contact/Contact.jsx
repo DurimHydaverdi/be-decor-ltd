@@ -1,9 +1,52 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.scss';
 import { FaInstagram } from 'react-icons/fa';
-// import backgroundImage from '../../components/Assets/background3.webp';
+
+// Modal component
+const Modal = ({ message, onClose }) => {
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <p>{message}</p>
+        <button onClick={onClose}>Okay</button>
+      </div>
+    </div>
+  );
+};
 
 const Contact = () => {
+  const form = useRef();
+  const [modalMessage, setModalMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  // EmailJS submission function
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_fzvt76b', 'template_hu5iish', form.current, {
+        publicKey: '4PKHjOZ9LmmXYSu-e',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setModalMessage('Your message has been sent successfully!');
+          setShowModal(true);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setModalMessage('Something went wrong. Please try again later.');
+          setShowModal(true);
+        }
+      );
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    form.current.reset(); // Reset the form after modal closes
+  };
+
   return (
     <div className="contact-wrapper">
       <h1>Contact</h1>
@@ -16,9 +59,6 @@ const Contact = () => {
       <div className="contact-content">
         {/* Left Side: Address Info */}
         <div className="contact-info">
-          {/* <h3>Address</h3>
-          <p>500 Terry Francine St. San Francisco, CA 94158</p> */}
-
           <h3>Phone</h3>
           <a href="tel:+447459507291">+447459507291</a>
 
@@ -27,30 +67,33 @@ const Contact = () => {
 
           <h3>Social Media</h3>
           <div className="social-media">
-            {/* <i className="fab fa-facebook"></i>
-            <i className="fab fa-twitter"></i>
-            <i className="fab fa-linkedin"></i> */}
-            <a href="https://www.instagram.com/bedecorltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.instagram.com/bedecorltd/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
           </div>
         </div>
 
         {/* Center: Contact Form */}
         <div className="contact-form">
-          <div className="form-row">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-          </div>
-          <input type="email" placeholder="Email *" required />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
+          <form className="contact-form" ref={form} onSubmit={sendEmail}>
+            <div className="form-row">
+              <input type="text" placeholder="First Name" name="from_name" required />
+              <input type="text" placeholder="Last Name" name="last_name" required />
+            </div>
+            <input type="email" placeholder="Email *" name="user_email" required />
+            <textarea placeholder="Message" name="message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
         </div>
 
         {/* Right Side: Full-Height Background Image */}
         <div className="contact-image"></div>
       </div>
+
+      {/* Modal */}
+      {showModal && <Modal message={modalMessage} onClose={handleCloseModal} />}
     </div>
   );
 };
 
 export default Contact;
-
