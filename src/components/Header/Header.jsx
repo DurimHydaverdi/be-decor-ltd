@@ -11,9 +11,15 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const handleLinkClick = () => {
+    // Scroll to top on any menu link click
+    window.scrollTo(0, 0);  // This will scroll the page to the top
+    setIsOpen(false);  // Close the menu after clicking a link
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 0); // Change header style on scroll
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,7 +29,7 @@ function Header() {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-logo">
-        <Link to="/">
+        <Link to="/" onClick={handleLinkClick}>
           <img src={logo} alt="Logo" />
         </Link>
       </div>
@@ -33,10 +39,10 @@ function Header() {
         <span></span>
       </div>
       <nav className={`header-nav ${isOpen ? 'active' : ''}`}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-        <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-        <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+        <Link to="/" onClick={handleLinkClick}>Home</Link>
+        <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
+        <Link to="/services" onClick={handleLinkClick}>Services</Link>
+        <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
       </nav>
       {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
     </header>
